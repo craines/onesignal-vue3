@@ -879,9 +879,8 @@ export const useOneSignal = () => {
 }
 
 const OneSignalVuePlugin = {
-  install(app: App, options: IInitObject) {
+  install(app: App) {
     app.config.globalProperties.$OneSignal = OneSignalVue as IOneSignal;
-    app.config.globalProperties.$OneSignal.init(options);
   }
 }
 
